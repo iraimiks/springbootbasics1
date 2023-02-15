@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post page</title>
+</head>
+<body>
+  <h1>Check how Spring send data</h1>
+  <div>
+      <a href="/posts/add">Write new Blog Post</a>
+  </div>
+  <div th:each="post : ${posts}">
+      <h3 th:text="${post.title}"></h3>
+      <h6 th:text="${post.description}"></h6>
+      <div th:text="${post.body}"></div>
+  </div>
+
+
+</body>
+</html>
